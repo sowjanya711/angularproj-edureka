@@ -1,9 +1,9 @@
 # angularproj
 
 Project available in
-https://github.com/SubhashiniSundaresan/angularproj.git
+https://github.com/sowjanya711/angularproj-edureka.git
 Steps:
-git clone https://github.com/SubhashiniSundaresan/angularproj.git
+git clone https://github.com/sowjanya711/angularproj-edureka.git
 npm install
 ng build
 Admin Login
