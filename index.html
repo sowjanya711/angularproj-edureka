@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+<base href="/">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.33.3/es6-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.16/system-polyfills.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-beta.7/angular2-polyfills.js"></script>
+    <script src="https://code.angularjs.org/tools/system.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-beta.7/Rx.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-beta.7/angular2.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-beta.7/router.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-beta.7/http.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- 2. Configure SystemJS and Import -->
+    <script>
+        System.config({
+        packages: {        
+          client: {
+            format: 'register',
+            defaultExtension: 'js'
+          }
+        }
+      });
+      System.import('client/boot')
+            .then(null, console.error.bind(console));
+            
+/*
+
+  // Alternative way is compile in all.js and use the following system config with all the modules added to the bundles.
+  // the bundle at build/core.js contains these modules
+System.config({
+    bundles: {
+      'client/build/all.js': ['boot','components/main/main','components/register/register','components/login/login','components/approve/approve','components/candidates/candidates','components/results/results','components/admin/admin','components/vote/vote','components/getapproval/getapproval','components/users/users','components/home/home','services/userdetails','services/httpprovider']
+    }
+  });
+
+  // when we load 'app/app' the bundle extension interrupts the loading process
+  // and ensures that build/core.js is loaded first
+  System.import('boot');
+
+*/
+    </script>
+
+</head>
+<body>
+    <main-app>Loading...</main-app>
+</body>
+</html>
